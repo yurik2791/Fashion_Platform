@@ -1,0 +1,42 @@
+﻿@model FashionPlatform.Domain.Entities.ShippingDetails
+
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Shipping Information</h2>
+<p>Please enter your shipping contact, and we will send your product!</p>
+
+@using (Html.BeginForm("Checkout", "Cart"))
+{
+    @Html.ValidationSummary();
+    <h3>Person Data</h3>
+    <div class="form-group">
+        <label>Name:</label>
+        @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+    </div>
+
+    <h3>Shippinga Adress</h3>
+    foreach (var property in ViewData.ModelMetadata.Properties)
+    {
+        if (property.PropertyName != "Name" && property.PropertyName != "GiftWrap")
+        {
+            <div class="form-group">
+            <label>@(property.DisplayName??property.PropertyName)</label>
+            @Html.TextBox(property.PropertyName, null, new {@class="form-control"})
+            </div>
+        }
+    }
+
+    <h3>Option</h3>
+    <div class="checkbox">
+        <label>
+            Use gift wrap?
+            @Html.EditorFor(p => p.GiftWrap)
+        </label>
+    </div>
+
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Checkout" />
+    </div>
+}

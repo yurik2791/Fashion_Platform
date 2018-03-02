@@ -1,0 +1,71 @@
+﻿@using FashionPlatform.Domain.Entities
+@model FashionPlatform.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Admin Panel. Edit Product";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="panel">
+    <div class="panel-heading">
+        <h2>Edit Product: @Model.Name</h2>
+    </div>
+</div>
+@using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new {enctype= "multipart/form-data" }))
+{
+    <div class="panel-body">
+        @Html.HiddenFor(p => p.ProductId)
+        @foreach (var item in ViewData.ModelMetadata.Properties)
+        {
+            switch (item.PropertyName)
+            {
+                case "ProductId":
+                case "ImageData":
+                case "ImageMimeType":
+                    break;
+                default:
+                    <div class="panel-group">
+                        <lable>@(item.DisplayName ?? item.PropertyName)</lable>
+                        @if (item.PropertyName == "Description")
+                        {
+                            @Html.TextArea(item.PropertyName, null, new { @class = "form-control", rows = 5 })
+                        }
+                        else
+                        {
+                            @Html.TextBox(item.PropertyName, null, new { @class = "form-control" })
+                        }
+                        @Html.ValidationMessage(item.PropertyName)
+                    </div>
+                    break;
+            }
+        }
+        <div class="form-group">
+            <div style="position: relative">
+                <label>Image</label>
+                <a class="btn" href='javascript:;'>
+                    Choose file
+                    <input type="file" name="Image" size="40"
+                           style="position: absolute; z-index:2;top:0;left:0;filter: alpha(opacity=0); opacity:0;
+                                                                                                  background-color:transparent;color:transparent;"
+                           onchange='$("#upload-file-info").html($(this).val());' />
+                </a>
+                <span class='label label-info' id="upload-file-info"></span>
+                <div>
+                    @if (Model.ImageData == null)
+                    {
+                        <div class="form-control-static">Not Image</div>
+                    }
+                    else
+                    {
+                        <img class="thumbnail" height="150" width="150"
+                        src="@Url.Action("GetImage", "Product", new { Model.ProductId })"/>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <input type="submit" class="btn btn-primary" value="Save" />
+            @Html.ActionLink("Don't save and return to list of product!", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+}

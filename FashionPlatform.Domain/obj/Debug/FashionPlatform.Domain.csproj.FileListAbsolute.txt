@@ -1,0 +1,46 @@
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\FashionPlatform.Domain.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\FashionPlatform.Domain.pdb
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Helpers.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Mvc.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Razor.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Helpers.xml
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Mvc.xml
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Razor.xml
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.xml
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.csprojResolveAssemblyReference.cache
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.pdb
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\FashionPlatform.Domain.dll.config
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.xml
+C:\Users\user\documents\visual studio 2015\Projects\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\FashionPlatform.Domain.dll.config
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\FashionPlatform.Domain.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\FashionPlatform.Domain.pdb
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Helpers.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Mvc.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Razor.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Helpers.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Mvc.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.Razor.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.dll
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.pdb

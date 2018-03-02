@@ -1,0 +1,18 @@
+﻿@model FashionPlatform.Domain.Entities.Cart
+
+<!--<div class="navbar-right">-->
+<li>In Cart: @Model.Lines.Sum(p => p.Quantity) product. Total:@Model.ComputeTotalValue().ToString("# $")</li>
+<li>
+    @Html.ActionLink("Cart",
+        "Index",
+        "Cart",
+        new { returnUrl = Request.Url.PathAndQuery }
+        /*new {@class = "btn btn-default navbar-btn"}*/
+        )
+</li>
+<!--</div>-->
+@*<div class="navbar-text navbar-right">
+        <b>Your Cart</b>
+        @Model.Lines.Sum(p => p.Quantity) product,
+        @Model.ComputeTotalValue().ToString("# $")
+    </div>*@
