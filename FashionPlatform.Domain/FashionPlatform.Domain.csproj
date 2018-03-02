@@ -129,6 +129,9 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAndRole\AppUserModels.cs" />
+    <Compile Include="UserAndRole\Infrastructure\AppIdentityDbContext.cs" />
+    <Compile Include="UserAndRole\Infrastructure\AppUserManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
