@@ -9,6 +9,7 @@ using FashionPlatform.WebUI.Models;
 
 namespace FashionPlatform.WebUI.Controllers
 {
+    [Authorize(Roles = "Administrators")]
     public class AdminController : Controller
     {
         public ActionResult Index()

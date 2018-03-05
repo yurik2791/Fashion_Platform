@@ -1,13 +1,18 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Web;
 using System.Web.Mvc;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using FashionPlatform.Domain.UserAndRole;
 using FashionPlatform.Domain.UserAndRole.Infrastructure;
+using FashionPlatform.WebUI.Models;
 
 namespace FashionPlatform.WebUI.Controllers
 {
+    [Authorize(Roles = "Administrators")]
     public class RoleAdminController : Controller
     {
         private AppUserManager UserManager
@@ -76,6 +81,55 @@ namespace FashionPlatform.WebUI.Controllers
             {
                 return View("Error", new string[] { "Роль не найдена" });
             }
+        }
+
+        public async Task<ActionResult> Edit(string id)
+        {
+            AppRole role = await RoleManager.FindByIdAsync(id);
+            string[] memberIDs = role.Users.Select(x => x.UserId).ToArray();
+
+            IEnumerable<AppUser> members
+                = UserManager.Users.Where(x => memberIDs.Any(y => y == x.Id));
+
+            IEnumerable<AppUser> nonMembers = UserManager.Users.Except(members);
+
+            return View(new RoleEditModel
+            {
+                Role = role,
+                Members = members,
+                NonMembers = nonMembers
+            });
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Edit(RoleModificationModel model)
+        {
+            IdentityResult result;
+            if (ModelState.IsValid)
+            {
+                foreach (string userId in model.IdsToAdd ?? new string[] { })
+                {
+                    result = await UserManager.AddToRoleAsync(userId, model.RoleName);
+
+                    if (!result.Succeeded)
+                    {
+                        return View("Error", result.Errors);
+                    }
+                }
+                foreach (string userId in model.IdsToDelete ?? new string[] { })
+                {
+                    result = await UserManager.RemoveFromRoleAsync(userId,
+                        model.RoleName);
+
+                    if (!result.Succeeded)
+                    {
+                        return View("Error", result.Errors);
+                    }
+                }
+                return RedirectToAction("Index");
+
+            }
+            return View("Error", new string[] { "Роль не найдена" });
         }
 
         private void AddErrorsFromResult(IdentityResult result)

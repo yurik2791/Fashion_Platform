@@ -17,6 +17,10 @@ namespace FashionPlatform.WebUI.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                return View("Error", new string[] { "В доступе отказано" });
+            }
             ViewBag.returnUrl = returnUrl;
             return View();
         }
@@ -48,6 +52,12 @@ namespace FashionPlatform.WebUI.Controllers
             return View(details);
         }
 
+        [Authorize]
+        public ActionResult Logout()
+        {
+            AuthManager.SignOut();
+            return RedirectToAction("Index", "Hom");
+        }
         private IAuthenticationManager AuthManager
         {
             get
