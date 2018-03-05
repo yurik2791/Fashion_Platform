@@ -9,12 +9,11 @@ namespace FashionPlatform.WebUI.Controllers
     public class HomController : Controller // Test controler
     {
         [Authorize]
-        public ActionResult Index()
+        public string Index()
         {
-            Dictionary<string, object> data = new Dictionary<string, object>();
-            data.Add("Ключ", "Значение");
+            
 
-            return View(data);
+            return "Hello world";
         }
     }
 }
