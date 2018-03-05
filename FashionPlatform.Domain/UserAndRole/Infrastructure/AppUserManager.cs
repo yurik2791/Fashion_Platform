@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using FashionPlatform.Domain.UserAndRole;
+using FashionPlatform.Domain.UserAndRole.Infrastructure;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using FashionPlatform.Domain.UserAndRole;
+
 
 namespace FashionPlatform.Domain.UserAndRole.Infrastructure
 {
@@ -17,6 +19,19 @@ namespace FashionPlatform.Domain.UserAndRole.Infrastructure
         {
             AppIdentityDbContext db = context.Get<AppIdentityDbContext>();
             AppUserManager manager = new AppUserManager(new UserStore<AppUser>(db));
+            manager.PasswordValidator = new PasswordValidator
+            {
+                RequiredLength = 6,
+                RequireNonLetterOrDigit = false,
+                RequireDigit = false,
+                RequireLowercase = true,
+                RequireUppercase = true
+            };
+            manager.UserValidator = new CustomUserValidator(manager)
+            {
+                AllowOnlyAlphanumericUserNames = true,
+                RequireUniqueEmail = true
+            };
             return manager;
         }
     }

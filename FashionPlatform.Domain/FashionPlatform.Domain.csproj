@@ -132,6 +132,7 @@
     <Compile Include="UserAndRole\AppUserModels.cs" />
     <Compile Include="UserAndRole\Infrastructure\AppIdentityDbContext.cs" />
     <Compile Include="UserAndRole\Infrastructure\AppUserManager.cs" />
+    <Compile Include="UserAndRole\Infrastructure\CustomUserValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
