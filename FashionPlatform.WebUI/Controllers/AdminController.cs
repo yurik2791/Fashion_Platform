@@ -40,6 +40,28 @@ namespace FashionPlatform.WebUI.Controllers
             }
             return View(model);
         }
+        [HttpPost]
+        public async Task<ActionResult> Delete(string id)
+        {
+            AppUser user = await UserManager.FindByIdAsync(id);
+
+            if (user != null)
+            {
+                IdentityResult result = await UserManager.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View("Error", result.Errors);
+                }
+            }
+            else
+            {
+                return View("Error", new string[] { "Пользователь не найден" });
+            }
+        }
 
         private void AddErrorsFromResult(IdentityResult result)
         {
