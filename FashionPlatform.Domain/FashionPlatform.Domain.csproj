@@ -128,8 +128,70 @@
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
+    <Compile Include="Migrations\201803121940222_InitialBSchema.cs" />
+    <Compile Include="Migrations\201803121940222_InitialBSchema.Designer.cs">
+      <DependentUpon>201803121940222_InitialBSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121943015_InitialSurveySchema.cs" />
+    <Compile Include="Migrations\201803121943015_InitialSurveySchema.Designer.cs">
+      <DependentUpon>201803121943015_InitialSurveySchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121954214_AddPropertyToUsers.cs" />
+    <Compile Include="Migrations\201803121954214_AddPropertyToUsers.Designer.cs">
+      <DependentUpon>201803121954214_AddPropertyToUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122001145_AddPropertyToUsers2.cs" />
+    <Compile Include="Migrations\201803122001145_AddPropertyToUsers2.Designer.cs">
+      <DependentUpon>201803122001145_AddPropertyToUsers2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122005413_AddPropertyToUsers3.cs" />
+    <Compile Include="Migrations\201803122005413_AddPropertyToUsers3.Designer.cs">
+      <DependentUpon>201803122005413_AddPropertyToUsers3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122008005_AddPropertyToUsers4.cs" />
+    <Compile Include="Migrations\201803122008005_AddPropertyToUsers4.Designer.cs">
+      <DependentUpon>201803122008005_AddPropertyToUsers4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122011217_AddTestPropertyToProduct.cs" />
+    <Compile Include="Migrations\201803122011217_AddTestPropertyToProduct.Designer.cs">
+      <DependentUpon>201803122011217_AddTestPropertyToProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122026327_AddPropertyToUsers5.cs" />
+    <Compile Include="Migrations\201803122026327_AddPropertyToUsers5.Designer.cs">
+      <DependentUpon>201803122026327_AddPropertyToUsers5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122028244_AddPropertyToUsers6.cs" />
+    <Compile Include="Migrations\201803122028244_AddPropertyToUsers6.Designer.cs">
+      <DependentUpon>201803122028244_AddPropertyToUsers6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122032143_AddPropertyToUsers7.cs" />
+    <Compile Include="Migrations\201803122032143_AddPropertyToUsers7.Designer.cs">
+      <DependentUpon>201803122032143_AddPropertyToUsers7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122036285_AddPropertyToUsers8.cs" />
+    <Compile Include="Migrations\201803122036285_AddPropertyToUsers8.Designer.cs">
+      <DependentUpon>201803122036285_AddPropertyToUsers8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122111483_AddPropertyToUsers9.cs" />
+    <Compile Include="Migrations\201803122111483_AddPropertyToUsers9.Designer.cs">
+      <DependentUpon>201803122111483_AddPropertyToUsers9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122117091_AddPropertyToUsers10.cs" />
+    <Compile Include="Migrations\201803122117091_AddPropertyToUsers10.Designer.cs">
+      <DependentUpon>201803122117091_AddPropertyToUsers10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122120052_AddPropertyToUsers11.cs" />
+    <Compile Include="Migrations\201803122120052_AddPropertyToUsers11.Designer.cs">
+      <DependentUpon>201803122120052_AddPropertyToUsers11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122122076_DeletTestPropfromProduct.cs" />
+    <Compile Include="Migrations\201803122122076_DeletTestPropfromProduct.Designer.cs">
+      <DependentUpon>201803122122076_DeletTestPropfromProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ConfigurationUsers.cs" />
+    <Compile Include="Migrations\ConfigurationProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAndRole\AppUserModels.cs" />
+    <Compile Include="UserAndRole\Infrastructure\AppUser.cs" />
     <Compile Include="UserAndRole\Infrastructure\AppIdentityDbContext.cs" />
     <Compile Include="UserAndRole\Infrastructure\AppRole.cs" />
     <Compile Include="UserAndRole\Infrastructure\AppRoleManager.cs" />
@@ -139,6 +201,53 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803121940222_InitialBSchema.resx">
+      <DependentUpon>201803121940222_InitialBSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121943015_InitialSurveySchema.resx">
+      <DependentUpon>201803121943015_InitialSurveySchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121954214_AddPropertyToUsers.resx">
+      <DependentUpon>201803121954214_AddPropertyToUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122001145_AddPropertyToUsers2.resx">
+      <DependentUpon>201803122001145_AddPropertyToUsers2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122005413_AddPropertyToUsers3.resx">
+      <DependentUpon>201803122005413_AddPropertyToUsers3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122008005_AddPropertyToUsers4.resx">
+      <DependentUpon>201803122008005_AddPropertyToUsers4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122011217_AddTestPropertyToProduct.resx">
+      <DependentUpon>201803122011217_AddTestPropertyToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122026327_AddPropertyToUsers5.resx">
+      <DependentUpon>201803122026327_AddPropertyToUsers5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122028244_AddPropertyToUsers6.resx">
+      <DependentUpon>201803122028244_AddPropertyToUsers6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122032143_AddPropertyToUsers7.resx">
+      <DependentUpon>201803122032143_AddPropertyToUsers7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122036285_AddPropertyToUsers8.resx">
+      <DependentUpon>201803122036285_AddPropertyToUsers8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122111483_AddPropertyToUsers9.resx">
+      <DependentUpon>201803122111483_AddPropertyToUsers9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122117091_AddPropertyToUsers10.resx">
+      <DependentUpon>201803122117091_AddPropertyToUsers10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122120052_AddPropertyToUsers11.resx">
+      <DependentUpon>201803122120052_AddPropertyToUsers11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122122076_DeletTestPropfromProduct.resx">
+      <DependentUpon>201803122122076_DeletTestPropfromProduct.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

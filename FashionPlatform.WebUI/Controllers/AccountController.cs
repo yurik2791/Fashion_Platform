@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -15,20 +16,20 @@ namespace FashionPlatform.WebUI.Controllers
     public class AccountController : Controller
     {
         [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
+        public ActionResult Login(string ReturnUrl)
         {
             if (HttpContext.User.Identity.IsAuthenticated)
             {
                 return View("Error", new string[] { "В доступе отказано" });
             }
-            ViewBag.returnUrl = returnUrl;
+            ViewBag.returnUrl = ReturnUrl;
             return View();
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel details, string returnUrl)
+        public async Task<ActionResult> Login(LoginViewModel details, string ReturnUrl)
         {
             AppUser user = await UserManager.FindAsync(details.Name, details.Password);
 
@@ -44,13 +45,45 @@ namespace FashionPlatform.WebUI.Controllers
                 AuthManager.SignOut();
                 AuthManager.SignIn(new AuthenticationProperties
                 {
-                    IsPersistent = true
+                    IsPersistent = false
                 }, ident);
-                return Redirect(returnUrl);
+                if (String.IsNullOrEmpty(ReturnUrl))
+                {
+                    return RedirectToAction("List", "Product");
+                }
+                return Redirect(ReturnUrl);
             }
 
             return View(details);
         }
+
+        //public ActionResult Register()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public async Task<ActionResult> Register(AppUser model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        model.
+        //        AppUser user = new AppUser { UserName = model.Email, Email = model.Email, Year = model.Year };
+        //        IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+        //        if (result.Succeeded)
+        //        {
+        //            return RedirectToAction("Login", "Account");
+        //        }
+        //        else
+        //        {
+        //            foreach (string error in result.Errors)
+        //            {
+        //                ModelState.AddModelError("", error);
+        //            }
+        //        }
+        //    }
+        //    return View(model);
+        //}
 
         [Authorize]
         public ActionResult Logout()

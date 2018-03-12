@@ -7,10 +7,10 @@
 
 @Html.ValidationSummary()
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Login","Account", new { ReturnUrl = Request.QueryString["ReturnUrl"]}))
 {
     @Html.AntiForgeryToken();
-    <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+    <input type="hidden" name="ReturnUrl" value="@ViewBag.returnUrl" />
     <div class="form-group">
         <label>Имя</label>
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })

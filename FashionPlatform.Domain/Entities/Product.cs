@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace FashionPlatform.Domain.Entities
@@ -31,15 +27,15 @@ namespace FashionPlatform.Domain.Entities
         public byte[] ImageData { get; set; }
         public string ImageMimeType { get; set; }
         public string Country { get; set; }
-        public Shoes ShoesEnum { get; set; }
-        public Up UpWearEnum { get; set; }
-        public Down DownWearEnum { get; set; }
-        public Accesories AccesoriesEnum { get; set; }
-        public ProductDestinasion ProductDestinasionEnum { get; set; }
-        public TypeOfFiber TypeOfFiber { get; set; }
-        public Cloth Cloth { get; set; }
-        public Style StyleEnum { get; set; }
-        public DressCode DressCodeEnum { get; set; }
+        public string Shoe { get; set; }
+        public string UpWear { get; set; }
+        public string DownWear { get; set; }
+        public string Accessory { get; set; }
+        public string ProductDestinasion { get; set; }
+        public string Fiber { get; set; }
+        public string Cloth { get; set; }
+        public string Style { get; set; }
+        public string DressCode { get; set; }
 
     }
 

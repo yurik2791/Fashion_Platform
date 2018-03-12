@@ -1,6 +1,4 @@
-﻿using FashionPlatform.Domain.UserAndRole;
-using FashionPlatform.Domain.UserAndRole.Infrastructure;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;

@@ -26,6 +26,8 @@ namespace FashionPlatform.Domain.Entities
         [Range(50, 250, ErrorMessage = "Введите правильное занчение для роста")]
         public int Height { get; set; } // Рост 
 
+        public int Arm { get; set; }  //Длина руки
+
         public int Shoes { get; set; } // Размер обуви
 
         public int Leg { get; set; } // Внутренняя длина ноги

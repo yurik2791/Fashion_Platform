@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using System.Security.Policy;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace FashionPlatform.Domain.UserAndRole.Infrastructure
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using FashionPlatform.Domain.Abstract;
 using FashionPlatform.Domain.Entities;
 
@@ -29,6 +25,15 @@ namespace FashionPlatform.Domain.Concrete
                     dbEntry.Price = product.Price;
                     dbEntry.ImageData = product.ImageData;
                     dbEntry.ImageMimeType = product.ImageMimeType;
+                    dbEntry.Cloth = product.Cloth;
+                    dbEntry.Accessory = product.Accessory;
+                    dbEntry.Country = product.Country;
+                    dbEntry.DownWear = product.DownWear;
+                    dbEntry.UpWear = product.UpWear;
+                    dbEntry.DressCode = product.DressCode;
+                    dbEntry.ProductDestinasion= product.ProductDestinasion;
+                    dbEntry.Shoe = product.Shoe;
+                    dbEntry.Style = product.Style;
                 }
             }
             context.SaveChanges();
