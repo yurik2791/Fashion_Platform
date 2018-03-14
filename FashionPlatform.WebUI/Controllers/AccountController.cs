@@ -31,7 +31,7 @@ namespace FashionPlatform.WebUI.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel details, string ReturnUrl)
         {
-            AppUser user = await UserManager.FindAsync(details.Name, details.Password);
+            AppUser user = await UserManager.FindAsync(details.UserName, details.Password);
 
             if (user == null)
             {
@@ -47,7 +47,7 @@ namespace FashionPlatform.WebUI.Controllers
                 {
                     IsPersistent = false
                 }, ident);
-                if (String.IsNullOrEmpty(ReturnUrl))
+                if (string.IsNullOrEmpty(ReturnUrl))
                 {
                     return RedirectToAction("List", "Product");
                 }
@@ -56,34 +56,36 @@ namespace FashionPlatform.WebUI.Controllers
 
             return View(details);
         }
+        [AllowAnonymous]
+        public ActionResult Register()
+        {
+            return View();
+        }
 
-        //public ActionResult Register()
-        //{
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public async Task<ActionResult> Register(AppUser model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        model.
-        //        AppUser user = new AppUser { UserName = model.Email, Email = model.Email, Year = model.Year };
-        //        IdentityResult result = await UserManager.CreateAsync(user, model.Password);
-        //        if (result.Succeeded)
-        //        {
-        //            return RedirectToAction("Login", "Account");
-        //        }
-        //        else
-        //        {
-        //            foreach (string error in result.Errors)
-        //            {
-        //                ModelState.AddModelError("", error);
-        //            }
-        //        }
-        //    }
-        //    return View(model);
-        //}
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Register(RegisterUserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                AppUser user = new AppUser { UserName = model.UserName, Email = model.Email,FirstName = model.FirstName, LastName = model.LastName};
+                IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await this.UserManager.AddToRoleAsync(user.Id, "Users");
+                    return RedirectToAction("Login", "Account");
+                }
+                else
+                {
+                    foreach (string error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error);
+                    }
+                }
+            }
+            return View(model);
+        }
 
         [Authorize]
         public ActionResult Logout()

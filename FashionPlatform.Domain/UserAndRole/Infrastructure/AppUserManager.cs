@@ -22,8 +22,8 @@ namespace FashionPlatform.Domain.UserAndRole.Infrastructure
                 RequiredLength = 6,
                 RequireNonLetterOrDigit = false,
                 RequireDigit = false,
-                RequireLowercase = true,
-                RequireUppercase = true
+                RequireLowercase = false,
+                RequireUppercase = false
             };
             manager.UserValidator = new CustomUserValidator(manager)
             {

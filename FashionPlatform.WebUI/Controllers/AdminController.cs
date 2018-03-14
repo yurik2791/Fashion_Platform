@@ -22,11 +22,11 @@ namespace FashionPlatform.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(CreateModel model)
+        public async Task<ActionResult> Create(RegisterUserViewModel model)
         {
             if (ModelState.IsValid)
             {
-                AppUser user = new AppUser { UserName = model.Name, Email = model.Email };
+                AppUser user = new AppUser { UserName = model.UserName,FirstName =model.FirstName, LastName = model.LastName,Email = model.Email};
                 IdentityResult result =
                     await UserManager.CreateAsync(user, model.Password);
 

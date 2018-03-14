@@ -5,9 +5,9 @@ namespace FashionPlatform.Domain.UserAndRole.Infrastructure
 {
     public class AppUser : IdentityUser
     {
-        public int Age { get; set; }
-        public int City { get; set; }
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        
         // Здесь будут указываться дополнительные свойства
     }
 

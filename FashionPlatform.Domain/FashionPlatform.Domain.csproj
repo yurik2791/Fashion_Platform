@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201803122122076_DeletTestPropfromProduct.Designer.cs">
       <DependentUpon>201803122122076_DeletTestPropfromProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803131937099_AddRegisterPropertyForUser.cs" />
+    <Compile Include="Migrations\201803131937099_AddRegisterPropertyForUser.Designer.cs">
+      <DependentUpon>201803131937099_AddRegisterPropertyForUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ConfigurationUsers.cs" />
     <Compile Include="Migrations\ConfigurationProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803122122076_DeletTestPropfromProduct.resx">
       <DependentUpon>201803122122076_DeletTestPropfromProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131937099_AddRegisterPropertyForUser.resx">
+      <DependentUpon>201803131937099_AddRegisterPropertyForUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

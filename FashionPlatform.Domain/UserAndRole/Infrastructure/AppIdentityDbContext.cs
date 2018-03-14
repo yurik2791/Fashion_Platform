@@ -17,6 +17,9 @@ namespace FashionPlatform.Domain.UserAndRole.Infrastructure
         {
             return new AppIdentityDbContext();
         }
+
+        //public DbSet<AppUser> Users { get; set; }
+
     }
 
     public class IdentityDbInit : DropCreateDatabaseIfModelChanges<AppIdentityDbContext>
