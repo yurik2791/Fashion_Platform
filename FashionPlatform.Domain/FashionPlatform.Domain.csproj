@@ -193,6 +193,14 @@
     <Compile Include="Migrations\201803131937099_AddRegisterPropertyForUser.Designer.cs">
       <DependentUpon>201803131937099_AddRegisterPropertyForUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803191943024_AddTableForAllEnum.cs" />
+    <Compile Include="Migrations\201803191943024_AddTableForAllEnum.Designer.cs">
+      <DependentUpon>201803191943024_AddTableForAllEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803192143243_EditNullableId.cs" />
+    <Compile Include="Migrations\201803192143243_EditNullableId.Designer.cs">
+      <DependentUpon>201803192143243_EditNullableId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ConfigurationUsers.cs" />
     <Compile Include="Migrations\ConfigurationProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,6 +263,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803131937099_AddRegisterPropertyForUser.resx">
       <DependentUpon>201803131937099_AddRegisterPropertyForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803191943024_AddTableForAllEnum.resx">
+      <DependentUpon>201803191943024_AddTableForAllEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803192143243_EditNullableId.resx">
+      <DependentUpon>201803192143243_EditNullableId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

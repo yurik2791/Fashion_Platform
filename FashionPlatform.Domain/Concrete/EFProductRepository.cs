@@ -25,15 +25,15 @@ namespace FashionPlatform.Domain.Concrete
                     dbEntry.Price = product.Price;
                     dbEntry.ImageData = product.ImageData;
                     dbEntry.ImageMimeType = product.ImageMimeType;
-                    dbEntry.Cloth = product.Cloth;
-                    dbEntry.Accessory = product.Accessory;
-                    dbEntry.Country = product.Country;
-                    dbEntry.DownWear = product.DownWear;
-                    dbEntry.UpWear = product.UpWear;
-                    dbEntry.DressCode = product.DressCode;
-                    dbEntry.ProductDestinasion= product.ProductDestinasion;
-                    dbEntry.Shoe = product.Shoe;
-                    dbEntry.Style = product.Style;
+                    dbEntry.ClothId = product.ClothId;
+                    dbEntry.AccessoryId = product.AccessoryId;
+                    dbEntry.CountryId = product.CountryId;
+                    dbEntry.DownWearId = product.DownWearId;
+                    dbEntry.UpWearId = product.UpWearId;
+                    dbEntry.DressCodeId = product.DressCodeId;
+                    dbEntry.ProductDestinasionId= product.ProductDestinasionId;
+                    dbEntry.ShoeId = product.ShoeId;
+                    dbEntry.StyleId = product.StyleId;
                 }
             }
             context.SaveChanges();

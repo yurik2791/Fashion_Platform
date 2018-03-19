@@ -24,7 +24,7 @@
                     case "ImageData":
                     case "ImageMimeType":
                         break;
-                    case "Shoe":
+                    @*case "Shoe":
                         <div class="panel-group">
                             <lable>@(item.DisplayName ?? item.PropertyName)</lable>
                             @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Shoes))), new { @class = "form-control" })
@@ -78,7 +78,7 @@
                                 }
                             });
                         </script>
-                        break;
+                        break;*@
                             default:
                             <div class="panel-group">
                                 <lable>@(item.DisplayName ?? item.PropertyName)</lable>

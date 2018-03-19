@@ -80,3 +80,5 @@ C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPl
 C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationUsers.AddPropertyToUsers11.resources
 C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.DeletTestPropfromProduct.resources
 C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationUsers.AddRegisterPropertyForUser.resources
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.AddTableForAllEnum.resources
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.EditNullableId.resources
