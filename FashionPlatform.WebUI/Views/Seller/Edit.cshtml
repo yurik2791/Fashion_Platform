@@ -5,17 +5,7 @@
     ViewBag.Title = "Admin Panel. Edit Product";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<script type="text/javascript">
 
-    $('#<%= DropDownList1.ClientID %>').change(function () {
-        if (this.value == 'Natural') {
-            $('#<%= Natural.ClientID %>').css('display', 'block');
-        }
-        else {
-            $('#<%= Natural.ClientID %>').css('display', 'none');
-        }
-    });
-</script>
 <div class="container">
     <div class="panel">
         <div class="panel-heading">
@@ -67,10 +57,27 @@
                     case "Fiber":
                         <div class="panel-group">
                             <lable>@(item.DisplayName ?? item.PropertyName)</lable>
-                           @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(TypeOfFiber))), new { @class = "form-control", ID = "DropDownList1"})
-                          
-                             @*@Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Natural))), new { @class = "form-control", ID = "Natural", Style = "Display:none" })*@
+                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(TypeOfFiber))), new { @class = "form-control", ID = "DropDownList1"})
                         </div>
+                        <div class="panel-group">
+                            <lable>Fabric</lable>
+                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Natural))), new { @class = "form-control", Style = "Display:none", id = "Natural" })
+                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Synthetic))), new { @class = "form-control", Style = "Display:none", id = "Synthetic" })
+                        </div>
+                       
+                        <script type="text/javascript">
+
+                            $('#DropDownList1').on('load change', function () {
+                                if ($('#DropDownList1').val() == 0) {
+                                    $('#Natural').css('display', 'block');
+                                    $('#Synthetic').css('display', 'none');
+                                }
+                                else {
+                                    $('#Synthetic').css('display', 'block');
+                                    $('#Natural').css('display', 'none');
+                                }
+                            });
+                        </script>
                         break;
                             default:
                             <div class="panel-group">

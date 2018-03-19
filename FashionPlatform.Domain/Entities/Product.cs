@@ -203,15 +203,4 @@ namespace FashionPlatform.Domain.Entities
 
 
     }
-    public class TypeOfFibers
-    {
-        ListItem 
-    }
-
 }
-        }
-Cotton,     //хлопок
-            Flax,       //лен
-            Asbestos,   //асбест
-            Wool,       //шерсть
-            Silk        //шелк
