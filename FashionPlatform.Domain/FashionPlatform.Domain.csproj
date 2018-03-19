@@ -124,6 +124,7 @@
     <Compile Include="Concrete\EFPersonRepository.cs" />
     <Compile Include="Concrete\EFProductRepository.cs" />
     <Compile Include="Concrete\EmailOrderProcessor.cs" />
+    <Compile Include="Concrete\GroupDropDownList.cs" />
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Product.cs" />

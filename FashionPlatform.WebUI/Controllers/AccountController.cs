@@ -16,26 +16,26 @@ namespace FashionPlatform.WebUI.Controllers
     public class AccountController : Controller
     {
         [AllowAnonymous]
-        public ActionResult Login(string ReturnUrl)
+        public ActionResult Login(string returnUrl)
         {
             if (HttpContext.User.Identity.IsAuthenticated)
             {
                 return View("Error", new string[] { "В доступе отказано" });
             }
-            ViewBag.returnUrl = ReturnUrl;
+            ViewBag.returnUrl = returnUrl;
             return View();
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel details, string ReturnUrl)
+        public async Task<ActionResult> Login(LoginViewModel details, string returnUrl)
         {
             AppUser user = await UserManager.FindAsync(details.UserName, details.Password);
 
             if (user == null)
             {
-                ModelState.AddModelError("", "Некорректное имя или пароль.");
+                ModelState.AddModelError("", @"Некорректное имя или пароль.");
             }
             else
             {
@@ -47,11 +47,11 @@ namespace FashionPlatform.WebUI.Controllers
                 {
                     IsPersistent = false
                 }, ident);
-                if (string.IsNullOrEmpty(ReturnUrl))
+                if (string.IsNullOrEmpty(returnUrl))
                 {
                     return RedirectToAction("List", "Product");
                 }
-                return Redirect(ReturnUrl);
+                return Redirect(returnUrl);
             }
 
             return View(details);
@@ -91,7 +91,7 @@ namespace FashionPlatform.WebUI.Controllers
         public ActionResult Logout()
         {
             AuthManager.SignOut();
-            return RedirectToAction("Index", "Hom");
+            return RedirectToAction("Login", "Account");
         }
         private IAuthenticationManager AuthManager
         {

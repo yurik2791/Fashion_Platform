@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
@@ -47,7 +48,7 @@ namespace FashionPlatform.Domain.Entities
         LowBoots        //ботинки
     }
 
-    public enum Up
+    public enum UpWear
     {
         Shirt,      //Рубашка
         Undershirt, //Майка
@@ -61,7 +62,7 @@ namespace FashionPlatform.Domain.Entities
         Bolero,     //болеро
     }
 
-    public enum Down
+    public enum DownWear
     {
         Overalls,   //комбинезон
         Dress,      //платье
@@ -102,9 +103,14 @@ namespace FashionPlatform.Domain.Entities
     }
 
 
-    public class TypeOfFiber        //Тип волокна
+    public enum TypeOfFiber //Тип волокна
     {
-        public enum Natural
+        Natural,
+        Synthetic,
+
+    }
+
+    public enum Natural
         {
             Cotton,     //хлопок
             Flax,       //лен
@@ -123,7 +129,6 @@ namespace FashionPlatform.Domain.Entities
             Polyurethane//полиуретан 
         }
 
-    }
 
     public class Cloth      //Ткань
     {
@@ -198,5 +203,15 @@ namespace FashionPlatform.Domain.Entities
 
 
     }
+    public class TypeOfFibers
+    {
+        ListItem 
+    }
 
 }
+        }
+Cotton,     //хлопок
+            Flax,       //лен
+            Asbestos,   //асбест
+            Wool,       //шерсть
+            Silk        //шелк
