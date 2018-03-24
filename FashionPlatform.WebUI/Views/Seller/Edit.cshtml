@@ -1,10 +1,21 @@
-﻿@using FashionPlatform.Domain.Entities
-@model FashionPlatform.Domain.Entities.Product
+﻿@model FashionPlatform.WebUI.Models.ProductViewModel
 
 @{
     ViewBag.Title = "Admin Panel. Edit Product";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<script>
+    // переопределение валидации на стороне клиента
+    $.validator.methods.range = function (value, element, param) {
+        var globalizedValue = value.replace(",", ".");
+        return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+    }
+ 
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+    }
+</script>
+
 
 <div class="container">
     <div class="panel">
@@ -23,63 +34,89 @@
                     case "ProductId":
                     case "ImageData":
                     case "ImageMimeType":
+                    case "CountryId":
+                    case "ShoeId":
+                    case "AccessoryId":
+                    case "ProductDestinationId":
+                    case "StyleId":
+                    case "UpWearId":
+                    case "DownWearId":
+                    case "DressCodeId":
+                    case "ClothId":
+                    case "FiberId":
+                    case "TypeFiber":
                         break;
-                    @*case "Shoe":
+                    
+                    case "CountryName":
                         <div class="panel-group">
-                            <lable>@(item.DisplayName ?? item.PropertyName)</lable>
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Shoes))), new { @class = "form-control" })
-                            </div>
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.CountryId, ViewBag.Countries as SelectList,"--select--", new { @class = "form-control" })
+                        </div>
                             break;
-                    case "UpWear":
+                    
+                    case "ShoeName":
                         <div class="panel-group">
-                            <lable>@(item.DisplayName ?? item.PropertyName)</lable>
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(UpWear))), new { @class = "form-control" })
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.ShoeId, ViewBag.Shoes as SelectList,"--select--", new { @class = "form-control" })
                         </div>
                         break;
-                    case "DownWear":
+                    case "AccessoryName":
                         <div class="panel-group">
-                            <lable>@(item.DisplayName ?? item.PropertyName)</lable>
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(DownWear))), new { @class = "form-control" })
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.AccessoryId, ViewBag.Accessories as SelectList,"--select--", new { @class = "form-control" })
                         </div>
                         break;
-                    case "Accessory":
+                    case "StyleName":
                         <div class="panel-group">
-                            <lable>@(item.DisplayName ?? item.PropertyName)</lable>
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Accesories))), new { @class = "form-control" })
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.StyleId, ViewBag.Styles as SelectList,"--select--", new { @class = "form-control" })
                         </div>
                         break;
-                    case "ProductDestinasion":
+                    case "ProductDestinationName":
                         <div class="panel-group">
-                            <lable>@(item.DisplayName ?? item.PropertyName)</lable>
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(ProductDestinasion))), new { @class = "form-control" })
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.ProductDestinationId, ViewBag.ProductDestinations as SelectList,"--select--", new { @class = "form-control" })
                         </div>
                         break;
-                    case "Fiber":
+                    case "UpWearName":
                         <div class="panel-group">
-                            <lable>@(item.DisplayName ?? item.PropertyName)</lable>
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(TypeOfFiber))), new { @class = "form-control", ID = "DropDownList1"})
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.UpWearId, ViewBag.UpWears as SelectList,"--select--", new { @class = "form-control" })
                         </div>
+                        break;
+                    case "DownWearName":
                         <div class="panel-group">
-                            <lable>Fabric</lable>
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Natural))), new { @class = "form-control", Style = "Display:none", id = "Natural" })
-                            @Html.DropDownList(item.PropertyName, EnumHelper.GetSelectList((typeof(Synthetic))), new { @class = "form-control", Style = "Display:none", id = "Synthetic" })
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.DownWearId, ViewBag.DownWears as SelectList,"--select--", new { @class = "form-control" })
                         </div>
-                       
-                        <script type="text/javascript">
-
-                            $('#DropDownList1').on('load change', function () {
-                                if ($('#DropDownList1').val() == 0) {
-                                    $('#Natural').css('display', 'block');
-                                    $('#Synthetic').css('display', 'none');
-                                }
-                                else {
-                                    $('#Synthetic').css('display', 'block');
-                                    $('#Natural').css('display', 'none');
-                                }
-                            });
-                        </script>
-                        break;*@
-                            default:
+                        break;
+                    case "DressCodeName":
+                        <div class="panel-group">
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.DressCodeId, ViewBag.DressCodes as SelectList,"--select--", new { @class = "form-control" })
+                        </div>
+                        break;
+                    case "ClothName":
+                        <div class="panel-group">
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.ClothId, ViewBag.Clothes as SelectList,"--select--", new { @class = "form-control" })
+                        </div>
+                        break;
+                    case "FiberName":
+                        <div class="panel-group">
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.DropDownListFor(m=>m.FiberId, ViewBag.Fibers as SelectList,"--select--", new { @class = "form-control" })
+                        </div>
+                        break;
+                    case "Price":
+                        <div class="panel-group">
+                            <lable>@(item.DisplayName??item.PropertyName)</lable>
+                            @Html.TextBoxFor(m=>m.Price, new { @class = "form-control" })
+                            @Html.ValidationMessage(item.PropertyName)
+                        </div>
+                        break;
+                   
+                      default:
                             <div class="panel-group">
                                 <lable>@(item.DisplayName ?? item.PropertyName)</lable>
                                 @if (item.PropertyName == "Description")

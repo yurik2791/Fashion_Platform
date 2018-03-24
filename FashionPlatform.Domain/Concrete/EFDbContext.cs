@@ -3,7 +3,7 @@ using FashionPlatform.Domain.Entities;
 
 namespace FashionPlatform.Domain.Concrete
 {
-    class EFDbContext:DbContext
+   public class EFDbContext:DbContext
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Person> Persons { get; set; }
@@ -12,7 +12,7 @@ namespace FashionPlatform.Domain.Concrete
         public DbSet<UpWear> UpWears { get; set; }
         public DbSet<DownWear> DownWears { get; set; }
         public DbSet<Accessory> Accessories { get; set; }
-        public DbSet<ProductDestinasion> ProductDestinasions { get; set; }
+        public DbSet<ProductDestination> ProductDestinasions { get; set; }
         public DbSet<TypeFiber> TypesFibers { get; set; }
         public DbSet<Fiber> Fibers { get; set; }
         public DbSet<Style> Styles { get; set; }

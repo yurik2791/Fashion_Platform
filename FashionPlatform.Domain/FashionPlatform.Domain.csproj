@@ -201,6 +201,26 @@
     <Compile Include="Migrations\201803192143243_EditNullableId.Designer.cs">
       <DependentUpon>201803192143243_EditNullableId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803232101092_EditShoeId.cs" />
+    <Compile Include="Migrations\201803232101092_EditShoeId.Designer.cs">
+      <DependentUpon>201803232101092_EditShoeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803232147186_EditShoeI.cs" />
+    <Compile Include="Migrations\201803232147186_EditShoeI.Designer.cs">
+      <DependentUpon>201803232147186_EditShoeI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803240657038_AddDropDownList.cs" />
+    <Compile Include="Migrations\201803240657038_AddDropDownList.Designer.cs">
+      <DependentUpon>201803240657038_AddDropDownList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803240711069_AddDropDown.cs" />
+    <Compile Include="Migrations\201803240711069_AddDropDown.Designer.cs">
+      <DependentUpon>201803240711069_AddDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803240716375_editProductDestination.cs" />
+    <Compile Include="Migrations\201803240716375_editProductDestination.Designer.cs">
+      <DependentUpon>201803240716375_editProductDestination.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ConfigurationUsers.cs" />
     <Compile Include="Migrations\ConfigurationProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,6 +289,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803192143243_EditNullableId.resx">
       <DependentUpon>201803192143243_EditNullableId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803232101092_EditShoeId.resx">
+      <DependentUpon>201803232101092_EditShoeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803232147186_EditShoeI.resx">
+      <DependentUpon>201803232147186_EditShoeI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803240657038_AddDropDownList.resx">
+      <DependentUpon>201803240657038_AddDropDownList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803240711069_AddDropDown.resx">
+      <DependentUpon>201803240711069_AddDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803240716375_editProductDestination.resx">
+      <DependentUpon>201803240716375_editProductDestination.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -32,7 +32,7 @@ namespace FashionPlatform.Domain.Entities
         public int? UpWearId { get; set; }
         public int? DownWearId { get; set; }
         public int? AccessoryId { get; set; }
-        public int? ProductDestinasionId { get; set; }
+        public int? ProductDestinationId { get; set; }
         public int? FiberId { get; set; }
         public int? ClothId { get; set; }
         public int? StyleId { get; set; }
@@ -42,67 +42,67 @@ namespace FashionPlatform.Domain.Entities
 
     public class Country
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int CountryId { get; set; }
+        public string CountryName { get; set; }
     }
     public class Shoe
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int ShoeId { get; set; }
+        public string ShoeName { get; set; }
     }
     public class UpWear
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int UpWearId { get; set; }
+        public string UpWearName { get; set; }
     }
     public class DownWear
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int DownWearId { get; set; }
+        public string DownWearName { get; set; }
     }
     public class Accessory
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int AccessoryId { get; set; }
+        public string AccessoryName { get; set; }
     }
-    public class ProductDestinasion
+    public class ProductDestination
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int ProductDestinationId { get; set; }
+        public string ProductDestinationName { get; set; }
     }
     public class TypeFiber
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int TypeFiberId { get; set; }
+        public string TypeFiberName { get; set; }
     }
 
     public class Fiber
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int FiberId { get; set; }
+        public string FiberName { get; set; }
         public int TypeFiberId { get; set; }
     }
     public class TypeCloth
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int TypeClothId { get; set; }
+        public string TypeClothName { get; set; }
     }
     public class Cloth
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int ClothId { get; set; }
+        public string ClothName { get; set; }
         public int TypeClothId { get; set; }
     }
 
     public class Style
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int StyleId { get; set; }
+        public string StyleName { get; set; }
     }
     public class DressCode
     {
-        public int Id { get; set; }
-        public string Value { get; set; }
+        public int DressCodeId { get; set; }
+        public string DressCodeName { get; set; }
     }
 
     //public enum Shoes

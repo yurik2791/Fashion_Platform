@@ -8,6 +8,18 @@ namespace FashionPlatform.Domain.Concrete
     {
         private EFDbContext context = new EFDbContext();
         public IEnumerable<Product> Products { get { return context.Products; } }
+        public IEnumerable<Cloth> Clothes { get { return context.Cloths; } }
+        public IEnumerable<Shoe> Shoes { get { return context.Shoes; } }
+        public IEnumerable<Accessory> Accessories { get { return context.Accessories; } }
+        public IEnumerable<Country> Countries { get { return context.Countries; } }
+        public IEnumerable<DownWear> DownWears { get { return context.DownWears; } }
+        public IEnumerable<UpWear> UpWears { get { return context.UpWears; } }
+        public IEnumerable<DressCode> DressCodes { get { return context.DressCodes; } }
+        public IEnumerable<Fiber> Fibers { get { return context.Fibers; } }
+        public IEnumerable<ProductDestination> ProductDestinasions { get { return context.ProductDestinasions; } }
+        public IEnumerable<Style> Styles { get { return context.Styles; } }
+        public IEnumerable<TypeCloth> TypesCloths { get { return context.TypesCloths; } }
+        public IEnumerable<TypeFiber> TypesFibers { get { return context.TypesFibers; } }
         public void SaveProduct(Product product)
         {
             if (product.ProductId == 0)
@@ -31,7 +43,7 @@ namespace FashionPlatform.Domain.Concrete
                     dbEntry.DownWearId = product.DownWearId;
                     dbEntry.UpWearId = product.UpWearId;
                     dbEntry.DressCodeId = product.DressCodeId;
-                    dbEntry.ProductDestinasionId= product.ProductDestinasionId;
+                    dbEntry.ProductDestinationId= product.ProductDestinationId;
                     dbEntry.ShoeId = product.ShoeId;
                     dbEntry.StyleId = product.StyleId;
                 }

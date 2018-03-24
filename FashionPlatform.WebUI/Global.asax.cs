@@ -16,6 +16,9 @@ namespace FashionPlatform.WebUI
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());// Добавили пользовательский обьект связывания данных
+            ModelBinders.Binders[typeof(float)] = new SingleModelBinder();
+            ModelBinders.Binders[typeof(double)] = new DoubleModelBinder();
+            ModelBinders.Binders[typeof(decimal)] = new DecimalModelBinder();
         }
     }
 }

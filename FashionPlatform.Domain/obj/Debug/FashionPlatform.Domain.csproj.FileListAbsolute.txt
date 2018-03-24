@@ -82,3 +82,8 @@ C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPl
 C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationUsers.AddRegisterPropertyForUser.resources
 C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.AddTableForAllEnum.resources
 C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.EditNullableId.resources
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.EditShoeId.resources
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.EditShoeI.resources
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.AddDropDownList.resources
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.AddDropDown.resources
+C:\Users\user\Desktop\FashionPlatform\FashionPlatform.Domain\obj\Debug\FashionPlatform.Domain.Migrations.MigrationProduct.editProductDestination.resources
