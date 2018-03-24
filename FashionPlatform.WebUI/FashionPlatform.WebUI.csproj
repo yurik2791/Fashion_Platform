@@ -272,6 +272,7 @@
     <Content Include="Views\Seller\Index.cshtml" />
     <Content Include="Views\Shared\Sort.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\MenuForSellers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
